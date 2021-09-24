@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 12, 14, 1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.register::before {
+    content: '';
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: url(./bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+}
+
+.register__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__image {
+    display: none;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.466);
+    border-radius: 10px;
+}
+
+.sign__up,
+.sign__in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.sign__up {
+    opacity: 0.8;
+}
+
+.data_error {
+    align-content: center;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    background-color: black;
+    font-size: 1.1em;
+}
+
+.sign__up:hover,
+.sign__in:hover {
+    transform: scale(1);
+}
+
+.sign__in {
+    opacity: 0.8;
+}
+
+.sign__up::before,
+.sign__in::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: burlywood;
+    transition: 0.2s;
+}
+
+.sign__up::before {
+    width: 0%;
+}
+
+.sign__in::before {
+    width: 0%;
+}
+
+.sign {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    transform: translateX(0vw);
+    transition: 0.2s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+form .form__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 10vw;
+    background: none;
+}
+
+.form__div input {
+    border: hidden;
+    border-bottom: 1px solid whitesmoke;
+    background: none;
+    transition: 0.2s;
+    height: 25px;
+}
+
+.form__div input:focus {
+    background: whitesmoke;
+}
+
+.form__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form__btn button {
+    border: hidden;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+@media all and (min-width: 750px) {
+    .register__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .register__image {
+        display: flex;
+        background: none;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .sign {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        width: 50vw;
+    }
+    .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+    .form {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        transform: translateX(0vw);
+        transition: 0.2s;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+    form .form__div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px 5vw;
+        background: none;
+    }
+}
+
+@media all and (min-width: 950px) {
+    .register__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 10vw;
+    }
+    .sign {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        width: 40vw;
+    }
+    .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+    .form {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        transform: translateX(0vw);
+        transition: 0.2s;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+    form .form__div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px 5vw;
+        background: none;
+    }
+}
